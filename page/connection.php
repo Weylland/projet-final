@@ -5,13 +5,14 @@ include './include/header.php';
 <main class="w-screen h-screen flex items-center justify-center relative">
     <form action="" class="flex flex-col items-center h-[700px] w-[400px] shadow-2xl rounded-lg relative">
         <div class="mb-32 mt-24">
-            <h1 class="text-center text-2xl font-mont font-medium">Connexion</h1>
+            <h1 class="text-center text-xl font-mont font-medium">Connexion</h1>
         </div>
         <div class="flex flex-col justify-end w-52 h-10 mb-6 relative font-quick">
             <input 
                 class=" 
                     text-gray-600 peer 
-                    border-b-2 
+                    border-b 
+                    focus:border-b-2
                     pl-3
                     border-gray-500
                     focus:outline-none
@@ -30,7 +31,7 @@ include './include/header.php';
                     peer-placeholder-shown:left-3
                     peer-placeholder-shown:text-base 
                     peer-placeholder-shown:text-gray-400 
-                    peer-placeholder-shown:top-3.5
+                    peer-placeholder-shown:top-3
                     peer-focus:left-0
                     peer-focus:-top-2
                     peer-focus:text-sm
@@ -41,9 +42,10 @@ include './include/header.php';
         <div class="flex flex-col justify-end w-52 h-10 mb-16 relative font-quick">
             <input 
                 class=" 
-                    text-gray-600 
-                    peer 
-                    border-b-2 
+                text-gray-600 peer 
+                    border-b
+                    focus:border-b-2
+                    pl-3
                     border-gray-500
                     focus:outline-none
                     focus:border-cyan-600
@@ -61,15 +63,30 @@ include './include/header.php';
                     peer-placeholder-shown:left-3
                     peer-placeholder-shown:text-base 
                     peer-placeholder-shown:text-gray-400 
-                    peer-placeholder-shown:top-3.5
+                    peer-placeholder-shown:top-3
                     peer-focus:left-0
                     peer-focus:-top-2
-                    peer-focus:text-s
+                    peer-focus:text-sm
                     peer-focus:text-gray-600
                     -z-10
                 " for="password">Mot de passe :</label>
         </div>
-        <button class="border border-cyan-600 rounded-[18px] w-[160px] h-[35px] hover:shadow-lg mb-2 font-quick">Valider</button>
+        <button 
+            class="
+                transition-all
+                border 
+                border-cyan-400 
+                rounded-[18px] 
+                w-[160px] h-[35px] 
+                hover:shadow-lg 
+                hover:border-2 
+                active:bg-cyan-500
+                active:scale-95
+                hover:bg-cyan-400
+                hover:text-white
+                mb-4 
+                font-quick
+            ">Valider</button>
         <div>
             <a href="#" class="font-quick text-xs text-gray-400 hover:underline">Identifiant oublié ?</a>
         </div>
