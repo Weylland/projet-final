@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding : 10px 0 70px 0;
+    color: rgba(31, 31,38);
+    font-weight: bold;
+    font-size: 28px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow-x: hidden;
+    padding: 100px 20px;
+}
+
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.label-de-merde{
+    font-size: 18px;
+}
+
+input{
+    width: 450px;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-bottom: 1.5px solid black;
+    display: flex;
+    align-items: center;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 1.5px solid rgb(175, 194, 253);
+    width: 500px;
+}
+
+textarea{
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 15px;
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+}
+
+.message label{
+    text-align: center;
+    padding-top: 10px;
+   
+}
+
+.btn-formulaire{
+    font-size: 15px;
+    width: 50%;
+    background: rgb(104,98,220);
+    background: linear-gradient(0deg, rgba(104,98,220,1) 0%, rgba(138,135,241,1) 56%);
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.button-container{
+    transition: 0.2s all;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.button-container:hover{
+    transform: scale(1.125);
+}
+
+
+@media screen and (max-width: 415px){
+    h1{
+        font-size: 15px;
+        padding: 10px 0 30px 0;
+    }
+    
+    textarea{
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 15px;
+        width:120px;
+        height: 150px;
+    }
+
+
+    input{
+        width: 120px;
+        margin: 10px 0;
+       
+    }
+
+    input:focus{
+        display: none;
+    }
+
+    label{
+        font-size: 15px;
+        padding:  10px 0;
+    }
+
+    .formulaire{
+        padding: 10px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    }
+
+    *{
+        display: block;
+        margin: auto;
+    }
+}
