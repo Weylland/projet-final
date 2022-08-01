@@ -3,7 +3,7 @@ include './include/header.php';
 ?>
 
 <main class="w-screen h-screen flex items-center justify-center relative">
-    <form action="" class="flex flex-col items-center h-[700px] w-[400px] shadow-2xl rounded-lg relative">
+    <form action="" class="flex flex-col items-center h-[700px] w-[400px] shadow-2xl rounded-lg relative insc-main">
         <div class="mb-32 mt-24">
             <h1 class="text-center text-xl font-mont font-medium">Connexion</h1>
         </div>
@@ -19,6 +19,7 @@ include './include/header.php';
                     focus:border-cyan-600
                     placeholder-transparent
                     bg-transparent
+                    z-10
                 " type="mail" id="mail" placeholder="Email :">
             <label 
                 class="
@@ -36,7 +37,6 @@ include './include/header.php';
                     peer-focus:-top-2
                     peer-focus:text-sm
                     peer-focus:text-gray-600
-                    -z-10
                 " for="mail">Email :</label>
         </div>
         <div class="flex flex-col justify-end w-52 h-10 mb-16 relative font-quick">
@@ -51,6 +51,7 @@ include './include/header.php';
                     focus:border-cyan-600
                     placeholder-transparent
                     bg-transparent
+                    z-10
                 " type="mail" id="password" placeholder="Mot de passe :">
             <label 
                 class="
@@ -68,7 +69,6 @@ include './include/header.php';
                     peer-focus:-top-2
                     peer-focus:text-sm
                     peer-focus:text-gray-600
-                    -z-10
                 " for="password">Mot de passe :</label>
         </div>
         <button 
@@ -91,7 +91,7 @@ include './include/header.php';
             <a href="#" class="font-quick text-xs text-gray-400 hover:underline">Identifiant oublié ?</a>
         </div>
         <div class="absolute bottom-6">
-            <a href="#" class="font-quick text-xs text-gray-400 hover:underline">Pas encore inscrit ?  s’enregistrer ici</a>
+            <a href="inscription.php" class="font-quick text-xs text-gray-400 hover:underline">Pas encore inscrit ?  s’enregistrer ici</a>
         </div>
     </form>
 </main>

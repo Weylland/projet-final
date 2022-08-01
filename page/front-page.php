@@ -29,10 +29,13 @@ include 'include/header.php';
                     <li>
                         <a href="#">Actualités</a>
                     </li>
+                    <li>
+                        <a href="formulaire.php">Contact</a>
+                    </li>
                 </ul>
             </div>
             <div class="link_connexion">
-                <a class="btn" href="">Se connecter</a>
+                <a class="btn" href="connection.php">Se connecter</a>
             </div>
         </nav>
 
