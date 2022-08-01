@@ -14,7 +14,7 @@ h1{
     font-size: 28px;
 }
 
-form{
+.form-formulaire{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,17 +121,17 @@ textarea{
     }
 
 
-    input{
+    .input-formulaire{
         width: 120px;
         margin: 10px 0;
        
     }
 
-    input:focus{
+    .input-formulaire:focus{
         display: none;
     }
 
-    label{
+    .label-formulaire{
         font-size: 15px;
         padding:  10px 0;
     }

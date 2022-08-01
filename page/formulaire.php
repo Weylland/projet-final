@@ -2,7 +2,7 @@
 include 'include/header.php';
 ?>
     
-<form action="" method="POST">
+<form class="form-formulaire" action="" method="POST">
     <section class= "formulaire">
     <h1>Formulaire de contact</h1>
     <div>
