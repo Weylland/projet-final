@@ -6,19 +6,19 @@ include 'include/header.php';
     <section class= "formulaire">
     <h1>Formulaire de contact</h1>
     <div>
-        <label class="label-de-merde" for="prenom">Prénom</label>
-    <input type="text" id="prenom" name="user">
+        <label class="label-formulaire" for="prenom">Prénom</label>
+    <input class= "input-formulaire" type="text" id="prenom" name="user">
     </div>
     <div>
-        <label class="label-de-merde" for="nom">Nom</label>
-        <input type="text" id="nom" name="user_name">
+        <label class="label-formulaire" for="nom">Nom</label>
+        <input class= "input-formulaire" type="text" id="nom" name="user_name">
     </div>
     <div>
-        <label class="label-de-merde" for="mail">E-mail</label>
-        <input type="email" id="mail" name="user_mail">
+        <label class="label-formulaire" for="mail">E-mail</label>
+        <input class= "input-formulaire" type="email" id="mail" name="user_mail">
     </div>
     <div class="message">
-        <label class="label-de-merde" for ="message">Message</label>
+        <label class="label-formulaire" for ="message">Message</label>
         <textarea id="msg" name="user_message"></textarea>
     </div>
 
