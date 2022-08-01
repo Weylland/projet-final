@@ -48,7 +48,7 @@ include 'include/header.php';
                 <p>01</p>
             </div>
             <div class="content_header f3">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet suscipit ullam delectus laboriosam voluptas, similique harum fugiat repellat repudiandae aut quas autem cupiditate eos veritatis beatae ut illum alias! Libero!</p>
                 <div class="link_header">
                     <a href="" class="btn">Lorem Ipsum</a>
