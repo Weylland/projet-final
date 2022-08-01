@@ -1,4 +1,14 @@
 
+<?php 
+    $point = "";
+
+    if ($_SERVER['REQUEST_URI'] == "/projet-final/") {
+        $point = ".";
+    } else {
+        $point = "..";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,8 +25,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <!-- CSS  -->
-    <link rel="stylesheet" href="./asset/css/main.css">
+    <link href="<?= $point ?>/dist/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= $point ?>/asset/css/main.css">
 
-    <link href="../dist/style.css" rel="stylesheet">
 </head>
 <body>
