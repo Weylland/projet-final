@@ -27,6 +27,5 @@
     <!-- CSS  -->
     <link href="<?= $point ?>/dist/style.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= $point ?>/asset/css/main.css">
-
 </head>
 <body>

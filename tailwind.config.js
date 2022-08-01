@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./page/connection.php"],
+  content: ["./page/*{html,php,js}"],
   theme: {
     fontFamily: {
       'quick': 'Quicksand, sans-serif',
-      'mont': 'Montserra, sans-serif'
+      'mont': 'Montserrat, sans-serif'
     }
   },
   plugins: [],

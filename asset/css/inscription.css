@@ -1,0 +1,61 @@
+.progression-cont p {
+    color: rgb(212, 212, 212);
+}
+
+#premier {
+    color: rgba(104,98,220,1);
+}
+
+.insc-line {
+    background-color: rgb(235, 235, 235);
+}
+
+#first {
+    background-color: rgba(104,98,220,1);
+}
+
+.insc-main {
+    background-color: white;
+}
+
+.insc-btn {
+    padding: 10px 20px;
+    background: rgb(104,98,220);
+    background: linear-gradient(0deg, rgba(104,98,220,1) 0%, rgba(138,135,241,1) 100%);
+    border-radius: 100px;
+    color: white;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.insc-btn:hover {
+    background: rgb(78, 74, 168);
+    background: linear-gradient(0deg, rgb(79, 74, 167) 0%, rgb(116, 113, 202) 100%);
+}
+
+#insc-btn-precedent {
+    display: none;
+}
+
+#insc-btn-cont {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#slider-insc-cont {
+    position: relative;
+}
+
+#slider-insc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s ease-out;
+}
