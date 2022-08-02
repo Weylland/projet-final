@@ -1,5 +1,6 @@
 
 <?php 
+    session_start(); /* session start pour démarer la session dans le header piur que tous les fichiers puissent en bénéficier */
     $point = "";
 
     if ($_SERVER['REQUEST_URI'] == "/projet-final/") {

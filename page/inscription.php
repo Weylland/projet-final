@@ -21,7 +21,7 @@ include './include/header.php';
                 <div class="insc-line h-2"></div>
             </div>
         </div>
-        <form action="" method="POST" class="w-5/6 h-4/6">
+        <form action="../systeme/inscription.php" method="POST" class="w-5/6 h-4/6"> <!-- J'appelle le fichier fonction de l'inscription -->
             <div id="slider-insc-cont" class="w-full h-full border-2 rounded-lg overflow-hidden">
                 <div id="slider-insc" class="h-5/6 w-[300%] flex" >
             

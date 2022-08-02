@@ -3,7 +3,7 @@ include './include/header.php';
 ?>
 
 <main class="w-screen h-screen flex items-center justify-center relative">
-    <form action="" class="flex flex-col items-center h-[700px] w-[400px] shadow-2xl rounded-lg relative insc-main">
+    <form action="../systeme/connection.php" method="POST" class="flex flex-col items-center h-[700px] w-[400px] shadow-2xl rounded-lg relative insc-main">
         <div class="mb-32 mt-24">
             <h1 class="text-center text-xl font-mont font-medium">Connexion</h1>
         </div>
@@ -20,7 +20,7 @@ include './include/header.php';
                     placeholder-transparent
                     bg-transparent
                     z-10
-                " type="mail" id="mail" placeholder="Email :">
+                " type="mail" id="mail" name="emails" placeholder="Email :">
             <label 
                 class="
                     transition-all 
@@ -52,7 +52,7 @@ include './include/header.php';
                     placeholder-transparent
                     bg-transparent
                     z-10
-                " type="mail" id="password" placeholder="Mot de passe :">
+                " type="mail" id="password" name="password" placeholder="Mot de passe :"> <!-- L'id doit être identique au for dans le label -->
             <label 
                 class="
                     transition-all 
@@ -71,7 +71,7 @@ include './include/header.php';
                     peer-focus:text-gray-600
                 " for="password">Mot de passe :</label>
         </div>
-        <button 
+        <button type="submit" name="submit"
             class="
                 transition-all
                 border 
