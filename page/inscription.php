@@ -42,7 +42,7 @@ include './include/header.php';
                                         placeholder-transparent
                                         bg-transparent
                                         z-10
-                                    " type="text" id="nom" name="nom" placeholder="Nom :">
+                                    " type="text" id="nom" name="nom" placeholder="Nom :" required>
                                 <label 
                                     class="
                                         transition-all 
@@ -76,7 +76,7 @@ include './include/header.php';
                                         placeholder-transparent
                                         bg-transparent
                                         z-10
-                                    " type="text" id="prenom" name="prenom" placeholder="Prénom :">
+                                    " type="text" id="prenom" name="prenom" placeholder="Prénom :" required>
                                 <label 
                                     class="
                                         transition-all 
@@ -110,7 +110,7 @@ include './include/header.php';
                                         placeholder-transparent
                                         bg-transparent
                                         z-10
-                                    " type="number" id="age" name="age" placeholder="Age :">
+                                    " type="number" id="age" name="age" placeholder="Age :" required>
                                 <label 
                                     class="
                                         transition-all 
@@ -149,7 +149,7 @@ include './include/header.php';
                                         placeholder-transparent
                                         bg-transparent
                                         z-10
-                                    " type="mail" id="mail" name="mail" placeholder="Email :">
+                                    " type="mail" id="mail" name="mail" placeholder="Email :" required>
                                 <label 
                                     class="
                                         transition-all 
@@ -183,7 +183,7 @@ include './include/header.php';
                                         placeholder-transparent
                                         bg-transparent
                                         z-10
-                                    " type="mail" id="confMail" name="confMail" placeholder="Confirmation de votre email :">
+                                    " type="mail" id="confMail" name="confMail" placeholder="Confirmation de votre email :" required>
                                 <label 
                                     class="
                                         transition-all 
@@ -222,7 +222,7 @@ include './include/header.php';
                                         placeholder-transparent
                                         bg-transparent
                                         z-10
-                                    " type="password" id="password" name="password" placeholder="Mot de passe :">
+                                    " type="password" id="password" name="password" placeholder="Mot de passe :" required>
                                 <label 
                                     class="
                                         transition-all 
@@ -256,7 +256,7 @@ include './include/header.php';
                                         placeholder-transparent
                                         bg-transparent
                                         z-10
-                                    " type="password" id="confPass" name="confPass" placeholder="Confirmation de votre mot de passe :">
+                                    " type="password" id="confPass" name="confPass" placeholder="Confirmation de votre mot de passe :" required>
                                 <label 
                                     class="
                                         transition-all 
@@ -301,7 +301,7 @@ include './include/header.php';
                                         placeholder-transparent
                                         bg-transparent
                                         z-10
-                                    " type="number" id="taille" placeholder="Taille en cm :">
+                                    " type="number" id="taille" name="taille" placeholder="Taille en cm :" required>
                                 <label 
                                     class="
                                         transition-all 
@@ -335,7 +335,7 @@ include './include/header.php';
                                         placeholder-transparent
                                         bg-transparent
                                         z-10
-                                    " type="number" id="poids" placeholder="Poids :">
+                                    " type="number" id="poids" name="poids" placeholder="Poids :" required>
                                 <label 
                                     class="
                                         transition-all 
@@ -393,7 +393,7 @@ include './include/header.php';
                                     focus:border-cyan-600
                                     bg-transparent
                                     z-10
-                                " id="groupeSanguins" name="groupeSanguins">
+                                " id="groupeSanguins" name="groupeSanguins" required>
                                 <option selected disabled class="text-gray-600">Groupe sanguins</option>
                                 <option value="ab+">AB+</option>
                                 <option value="ab-">AB-</option>
@@ -426,7 +426,7 @@ include './include/header.php';
                                     bg-transparent
                                     z-10
                                 " id="catSocP1" name="catSocP1">
-                                <option selected disabled class="text-gray-600">Catégories socioprofessionnelles parent 1</option>
+                                <option selected value="" disabled class="text-gray-600">Catégories socioprofessionnelles parent 1</option>
                                 <option value="1">Agriculteurs exploitants</option>
                                 <option value="2">Artisans, commerçants, chefs d'entreprise</option>
                                 <option value="3">Cadres et professions intellectuelles supérieures</option>
@@ -450,7 +450,7 @@ include './include/header.php';
                                     bg-transparent
                                     z-10
                                 " id="catSocP2" name="catSocP2">
-                                <option selected disabled class="text-gray-600">Catégories socioprofessionnelles parent 2</option>
+                                <option selected value="" disabled class="text-gray-600">Catégories socioprofessionnelles parent 2</option>
                                 <option value="1">Agriculteurs exploitants</option>
                                 <option value="2">Artisans, commerçants, chefs d'entreprise</option>
                                 <option value="3">Cadres et professions intellectuelles supérieures</option>
@@ -541,6 +541,7 @@ include './include/header.php';
                     </div>
                 </div>
             </div>
+            <button class="btn" type="submit" name="submit">Envoyer</button>
         </form>
     </div>
 
