@@ -43,6 +43,7 @@ if (isset($_POST['submit'])) {
     $statement = $pdo->prepare($requete);
 
     // $age = intval($_POST['age']);      // permet de forcer le type en int 
+    var_dump(intval($_POST['age']));
 
     $result = $statement->execute([
         "age" =>  intval($_POST['age']), 
@@ -59,4 +60,6 @@ if (isset($_POST['submit'])) {
         "revenu_1" => intval($_POST['salaireP1']),
         "revenu_2" => intval($_POST['salaireP2']),
     ]);
+
+    
 }

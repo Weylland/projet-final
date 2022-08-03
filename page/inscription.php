@@ -538,10 +538,10 @@ include './include/header.php';
                     </div>
                     <div class="h-full w-[100px] flex justify-end items-center mr-6">
                         <div class="insc-btn" id="insc-btn-suivant">Suivant</div>
+                        <button class="insc-btn" id="insc-btn-envoyer" type="submit" name="submit">Envoyer</button>
                     </div>
                 </div>
             </div>
-            <button class="btn" type="submit" name="submit">Envoyer</button>
         </form>
     </div>
 

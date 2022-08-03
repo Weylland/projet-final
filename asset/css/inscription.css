@@ -39,7 +39,8 @@
     background: linear-gradient(0deg, rgb(79, 74, 167) 0%, rgb(116, 113, 202) 100%);
 }
 
-#insc-btn-precedent {
+#insc-btn-precedent,
+#insc-btn-envoyer {
     display: none;
 }
 
