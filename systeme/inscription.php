@@ -162,19 +162,19 @@ if (isset($_POST['submit'])) {
     $statement->execute(['email' => $_POST['mail']]);
     $result = $statement->fetch();
 
-    $requete = 'INSERT INTO score VALUES (null, :age, :imc, :genre, :gp, :csp_1, :csp_2, :id_users)';
+    $requete = 'INSERT INTO score VALUES (null, :ageScore, :imcScore, :genreScore, :gpScore, :csp_1Score, :csp_2Score, :id_users)';
     $statement = $pdo->prepare($requete);
     $statement->execute([
-        "age"=> $ageScore,
-        "imc"=> $imcScore,
-        "genre"=> $genreScore,
-        "gp"=> $gpScore,
-        "csp_1"=> $cspScore1,
-        "csp_2"=> $cspScore2,
+        "ageScore"=> $ageScore,
+        "imcScore"=> $imcScore,
+        "genreScore"=> $genreScore,
+        "gpScore"=> $gpScore,
+        "csp_1Score"=> $cspScore1,
+        "csp_2Score"=> $cspScore2,
         "id_users"=> $result->id
     ]);
 
-    
+
 
     var_dump($result);
 

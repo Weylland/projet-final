@@ -2,4 +2,4 @@
 
 include 'include/header.php';
 
-var_dump($_SESSION);
+print_r($_SESSION);
