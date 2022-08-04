@@ -70,7 +70,7 @@ switch ($_POST['groupeSanguins']) { /* permet de vérifier dans une condition da
         $gpScore = 5;
         break;
     case 'o-':
-        $gpScore = 2.5;
+        $gpScore = 2;
         break;
     default:
         header('location: ../page/inscription.php');
@@ -157,5 +157,26 @@ if (isset($_POST['submit'])) {
         "score" => $score,
     ]);
 
-    header('location: ../page/connection.php');
+    $requete = 'SELECT id FROM users WHERE mail = :email';
+    $statement = $pdo->prepare($requete);
+    $statement->execute(['email' => $_POST['mail']]);
+    $result = $statement->fetch();
+
+    $requete = 'INSERT INTO score VALUES (null, :age, :imc, :genre, :gp, :csp_1, :csp_2, :id_users)';
+    $statement = $pdo->prepare($requete);
+    $statement->execute([
+        "age"=> $ageScore,
+        "imc"=> $imcScore,
+        "genre"=> $genreScore,
+        "gp"=> $gpScore,
+        "csp_1"=> $cspScore1,
+        "csp_2"=> $cspScore2,
+        "id_users"=> $result->id
+    ]);
+
+    
+
+    var_dump($result);
+
+    // header('location: ../page/connection.php');
 }

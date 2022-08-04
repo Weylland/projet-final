@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) { /* 1 : ici on vérifie qu'on a bien envoyer un fo
 
     $count = $statement->rowCount(); /* RowCount est une méthode de l'objet PDO qui permet de véfirer le nombre de rangées dans notre tableau statement qui est de ce qui se trouve dans la bdd */ /* renvoie le nombre de rangée correspondant à l'eamil, sil est égale à 0  le mail n'existe pas dans la bdd et si il ets supérieur à 0 , le mail existe danbs la bdd */
     if ($count > 0) { /* si le nombre de rangée est supérieur à 0 */ /* un suel utilisateur auran accès aux infos perso */
-        $result = $statement->fetch(); /* je déclare une variable qu                 i me permet de récupérer un élement dans le tableau, créatio du tableau avec les données de la bdd */
+        $result = $statement->fetch(); /* je déclare une variable qui me permet de récupérer un élement dans le tableau, créatio du tableau avec les données de la bdd */
         if (password_verify($_POST['password'], $result->mdp)) {
             // if($_POST['password'] == $result->mdp) { /* je vérifie que le mot de passe envoyé dans le formulaire est égale au mot de la bdd*/ /*-> pour cibler un élement d'unt tableau de type objet */ /* la dans mon tableau ou il ya les infos de la bdd, je cible le mdp de la bdd*/
             $_SESSION = [ /* $_SESSIOn est acessible sur tous les fichier car c une superglobale , il contient les données de l'utilisateur*/ /* one fait ce tableau ici car c a ce moment qu'on donne l'acces au infos de l'utilisateur */
