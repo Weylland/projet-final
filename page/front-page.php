@@ -39,7 +39,9 @@ include 'include/header.php';
                     if(isset($_SESSION['connecter'])) { /* je cible la clef connecter crée dans le fichier connexion du syst du  tableau $_SESSION qui est égale à true, on utilise isset pour voir si le tableau est vide, et s'il est vide donc si tes pas connecter du coup c égal à false, du coup pas connecter */
                         echo '<a class="btn" href="../systeme/deconnexion.php">Se déconnecter</a>'; /* on focus dans le href le fichier de traitement de déconnexion */
                     } else {
-                        echo '<a class="btn" href="connection.php">Se connecter</a>';
+                        echo '<a class="btn" href="connection.php">Se connecter</a>
+                              <a class="btn" href="inscription.php">S\'inscrire</a>
+                             ';
                     }
                 ?>
             </div>

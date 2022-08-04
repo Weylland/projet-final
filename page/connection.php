@@ -52,7 +52,7 @@ include './include/header.php';
                     placeholder-transparent
                     bg-transparent
                     z-10
-                " type="mail" id="password" name="password" placeholder="Mot de passe :"> <!-- L'id doit être identique au for dans le label -->
+                " type="password" id="password" name="password" placeholder="Mot de passe :"> <!-- L'id doit être identique au for dans le label -->
             <label 
                 class="
                     transition-all 

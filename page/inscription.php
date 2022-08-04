@@ -371,9 +371,9 @@ include './include/header.php';
                                         z-10
                                     " id="genre" name="genre">
                                     <option selected disabled class="text-gray-600">choisissez votre genre</option>
-                                    <option value="homme">Homme</option>
-                                    <option value="femme">Femme</option>
-                                    <option value="autre">Autre</option>
+                                    <option value="1">Homme</option>
+                                    <option value="2">Femme</option>
+                                    <option value="3">Autre</option>
                                 </select>
                             </div>
 
