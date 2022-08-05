@@ -52,11 +52,11 @@ if (isset($_POST['submit'])) { /* 1 : ici on vérifie qu'on a bien envoyer un fo
                 'revenu_1' => $result->revenu_1,
                 'revenu_2' => $result->revenu_2,/* je créer dans le tableau seesion que je vais pouvoir utiliser dans les autres fichier, les clef à laquelle je leur attribut la valeur du tableau crée avec la méthode fetch de l'objet PDO, et je cible les colonnes de la table avec -> */
                 'ageScore' => $result->ageScore,
-                'imcScore' => $result->ageScore,
-                'genreScore' => $result->ageScore,
-                'gpScore' => $result->ageScore,
-                'csp_1Score' => $result->ageScore,
-                'csp_2Score' => $result->ageScore,
+                'imcScore' => $result->imcScore,
+                'genreScore' => $result->genreScore,
+                'gpScore' => $result->gpScore,
+                'csp_1Score' => $result->csp_1Score,
+                'csp_2Score' => $result->csp_2Score,
             ];
             header('location: ../page/dashboard.php');
         } else {

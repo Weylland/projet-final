@@ -81,8 +81,8 @@ switch ($_POST['groupeSanguins']) { /* permet de vérifier dans une condition da
 $cspScore1 = 0;
 $cspScore2 = 0;
 $parentNumber = 0;
-$catSocP1 = "";
-$catSocP2 = "";
+$catSocP1 = NULL;
+$catSocP2 = NULL;
 
 /* On doit d'abords vérifier que les valeurs des csp et salaires soient vides pour que le score ne soit pas prit en compte */
 
