@@ -81,12 +81,15 @@ switch ($_POST['groupeSanguins']) { /* permet de vérifier dans une condition da
 $cspScore1 = 0;
 $cspScore2 = 0;
 $parentNumber = 0;
+$catSocP1 = "";
+$catSocP2 = "";
 
 /* On doit d'abords vérifier que les valeurs des csp et salaires soient vides pour que le score ne soit pas prit en compte */
 
 if(isset($_POST['catSocP1']) && $_POST['salaireP1'] !== '') { /* isset = si la variable existe, en gros si c pas rempli par l'utilisateur. Si les valeurs ne sont pas NULL ou ne sont pas des chaine de caractère vide (!), de ce fait on lance le calcul */
     $cspScore1 = calcul_csp($_POST['catSocP1'], $_POST['salaireP1']); /* $result qui est le resultat des condtions dans la fonction calcul sera stocké comme valeur dans la variable $cspScore 1 ou 2 */
     $parentNumber++; /* ça ajout +1 sur la variable $parentNumber, en gros un parent est prit en compte */
+    $catSocP1 = $_POST['catSocP1'];
 }
 
 /* Du coup si c'est vide, que l'utilisateur na pas rempli et du que la condition ne peut pas démarrer, alors on avance dans le code il ne se passe rien */
@@ -94,13 +97,12 @@ if(isset($_POST['catSocP1']) && $_POST['salaireP1'] !== '') { /* isset = si la v
 if(isset($_POST['catSocP2']) && $_POST['salaireP2'] !== '') { 
     $cspScore2 = calcul_csp($_POST['catSocP2'], $_POST['salaireP2']); 
     $parentNumber++; /* de ce fait, la valeur de la varaibles ds parents peut etre égale soit à 0, 1 ou 2*/
+    $catSocP2 = $_POST['catSocP2'];
 }
 
 /* Ici on fait le calcul du score */
 
 $score = round(($imcScore + $ageScore + $genreScore + $gpScore + $cspScore1 + $cspScore2) / (4 + $parentNumber)); /* On fait le calcul moyen du score en prenant en compte le nombre de parent dans la division */
-
-
 
 
 // Connection à la bdd 
@@ -150,8 +152,8 @@ if (isset($_POST['submit'])) {
         "taille" => intval($_POST['taille']),
         "genre" => $_POST['genre'],
         "sang" => $_POST['groupeSanguins'],
-        "csp_1" => $_POST['catSocP1'],
-        "csp_2" => $_POST['catSocP2'],
+        "csp_1" => $catSocP1,
+        "csp_2" => $catSocP2,
         "revenu_1" => intval($_POST['salaireP1']),
         "revenu_2" => intval($_POST['salaireP2']),
         "score" => $score,
