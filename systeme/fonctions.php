@@ -1,6 +1,5 @@
 <?php
 
-session_start(); /* on met la session star ici car ce fichier et toujours dans les fichier du dossier syst */
 
 /* création de la fonction pour se connecter à la bdd */
 

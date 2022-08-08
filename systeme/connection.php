@@ -1,6 +1,7 @@
 
 <?php
 
+session_start();
 
 
 include './fonctions.php';  /* j'appelle le fichier avec les fonctions (la connexion à la bdd) */
@@ -37,7 +38,7 @@ if (isset($_POST['submit'])) { /* 1 : ici on vérifie qu'on a bien envoyer un fo
         $result = $statement->fetch(); /* je déclare une variable qui me permet de récupérer un élement dans le tableau, créatio du tableau avec les données de la bdd */
         if (password_verify($_POST['password'], $result->mdp)) {
             // if($_POST['password'] == $result->mdp) { /* je vérifie que le mot de passe envoyé dans le formulaire est égale au mot de la bdd*/ /*-> pour cibler un élement d'unt tableau de type objet */ /* la dans mon tableau ou il ya les infos de la bdd, je cible le mdp de la bdd*/
-            $_SESSION = [ /* $_SESSIOn est acessible sur tous les fichier car c une superglobale , il contient les données de l'utilisateur*/ /* one fait ce tableau ici car c a ce moment qu'on donne l'acces au infos de l'utilisateur */
+            $_SESSION = [ /* $_SESSION est acessible sur tous les fichier car c une superglobale , il contient les données de l'utilisateur*/ /* one fait ce tableau ici car c a ce moment qu'on donne l'acces au infos de l'utilisateur */
                 'connecter' => true, /* j'utlise la superglobale $_SESSION dans laquelle j'ajoute dans le tableau l'élément connecter avec une valeur à true */
                 'nom' =>  $result->nom,
                 'prenom' =>  $result->prenom,
@@ -51,6 +52,7 @@ if (isset($_POST['submit'])) { /* 1 : ici on vérifie qu'on a bien envoyer un fo
                 'csp_2' => $result->csp_2,
                 'revenu_1' => $result->revenu_1,
                 'revenu_2' => $result->revenu_2,/* je créer dans le tableau seesion que je vais pouvoir utiliser dans les autres fichier, les clef à laquelle je leur attribut la valeur du tableau crée avec la méthode fetch de l'objet PDO, et je cible les colonnes de la table avec -> */
+                'score' => $result->score,
                 'ageScore' => $result->ageScore,
                 'imcScore' => $result->imcScore,
                 'genreScore' => $result->genreScore,

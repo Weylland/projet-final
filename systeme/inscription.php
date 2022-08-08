@@ -1,6 +1,8 @@
 
 <?php
 
+session_start();
+
 include './fonctions.php';  /* j'appelle le fichier avec les fonctions (la connexion à la bdd) */
 
 array_walk_recursive($_POST, function (&$v) {
@@ -178,7 +180,7 @@ if (isset($_POST['submit'])) {
 
 
 
-    var_dump($result);
 
-    // header('location: ../page/connection.php');
+
+    header('location: ../page/connection.php');
 }
