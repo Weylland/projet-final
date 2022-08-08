@@ -42,23 +42,67 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
                 <div class="row__center">
                     <div class="content__1">
                         <p>Genre</p>
-                        <p><?= $_SESSION['genre']; ?></p>
+                        <p><?php
+                            switch ($_SESSION['genre']) {
+                                case 1:
+                                    echo 'Homme';
+                                    break;
+                                case 2:
+                                    echo 'Femme';
+                                    break;
+                                case 3:
+                                    echo 'Autre';
+                                    break;
+                                default:
+                                    echo 'Error';
+                            }
+                            ?></p>
                     </div>
                     <div class="content__2">
                         <p>Taille</p>
                         <p><?= $_SESSION['taille']; ?>cm</p>
                         <button class="">Modifier</button>
                     </div>
-                    <div class="content__3">
-                        <p>Revenu</p>
-                        <p><?= $_SESSION['revenu_1']; ?>€</p>
-                        <button class="">Modifier</button>
-                    </div>
-                    <div class="content__4">
-                        <p>Catégories sociaux professionelles</p>
-                        <p><?= $_SESSION['csp_1']; ?></p>
-                        <button class="">Modifier</button>
-                    </div>
+                    <?php if($_SESSION['revenu_1'] != 0): ?>
+                        <div class="content__3">
+                            <p>Revenu 1</p>
+                            <p><?= $_SESSION['revenu_1']; ?>€</p>
+                            <button class="">Modifier</button>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($_SESSION['csp_1'])): ?>
+                        <div class="content__4">
+                            <p>Catégories sociaux professionelles 1</p>
+                            <p><?php  
+                                    switch ($_SESSION['csp_1']) {
+                                        case 1:
+                                            echo 'Agriculteurs exploitants';
+                                            break;
+                                        case 2:
+                                            echo 'Artisans, commerçants, chefs d\'entreprise';
+                                            break;
+                                        case 3:
+                                            echo 'Cadres et professions intellectuelles supérieures';
+                                            break;
+                                        case 4:
+                                            echo 'Professions intermédiaires';
+                                            break;
+                                        case 5:
+                                            echo 'Employés';
+                                            break;
+                                        case 6:
+                                            echo 'Ouvriers';
+                                            break;
+                                        case 7:
+                                            echo 'Autres';
+                                            break;
+                                        default:
+                                            echo 'Error';
+                                    }
+                            ?></p>
+                            <button class="">Modifier</button>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="row__center">
                     <div class="content__1">
@@ -70,16 +114,46 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
                         <p><?= $_SESSION['poid']; ?>Kg</p>
                         <button class="">Modifier</button>
                     </div>
-                    <div class="content__3">
-                        <p>Revenu 2</p>
-                        <p><?= $_SESSION['revenu_2']; ?>€</p>
-                        <button class="">Modifier</button>
-                    </div>
-                    <div class="content__4">
-                        <p>Catégories sociaux professionelles 2</p>
-                        <p><?= $_SESSION['csp_2']; ?></p>
-                        <button class="">Modifier</button>
-                    </div>
+                    <?php if($_SESSION['revenu_2'] != 0): ?>
+                        <div class="content__3">
+                            <p>Revenu 2</p>
+                            <p><?= $_SESSION['revenu_2']; ?>€</p>
+                            <button class="">Modifier</button>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($_SESSION['csp_2'])): ?>
+                        <div class="content__4">
+                            <p>Catégories sociaux professionelles 2</p>
+                            <p><?php  
+                                    switch ($_SESSION['csp_2']) {
+                                        case 1:
+                                            echo 'Agriculteurs exploitants';
+                                            break;
+                                        case 2:
+                                            echo 'Artisans, commerçants, chefs d\'entreprise';
+                                            break;
+                                        case 3:
+                                            echo 'Cadres et professions intellectuelles supérieures';
+                                            break;
+                                        case 4:
+                                            echo 'Professions intermédiaires';
+                                            break;
+                                        case 5:
+                                            echo 'Employés';
+                                            break;
+                                        case 6:
+                                            echo 'Ouvriers';
+                                            break;
+                                        case 7:
+                                            echo 'Autres';
+                                            break;
+                                        default:
+                                            echo 'Error';
+                                    }
+                            ?></p>
+                            <button class="">Modifier</button>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="second__bloc__center">
@@ -100,14 +174,18 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
                         <p>Score Age</p>
                         <p><?= $_SESSION['ageScore']; ?>/20</p>
                     </div>
-                    <div class="bloc__5">
-                        <p>Score CSP 1</p>
-                        <p><?= $_SESSION['csp_1Score']; ?>/20</p>
-                    </div>
-                    <div class="bloc__6">
-                        <p>Score CSP 2</p>
-                        <p><?= $_SESSION['csp_2Score']; ?>/20</p>
-                    </div>
+                    <?php if($_SESSION['csp_1Score'] != 0): ?>
+                        <div class="bloc_5">
+                            <p>Score CSP 1</p>
+                            <p><?= $_SESSION['csp_1Score']; ?>/20</p>
+                        </div>
+                    <?php endif; ?>
+                    <?php if($_SESSION['csp_2Score'] != 0): ?>
+                        <div class="bloc_6">
+                            <p>Score CSP 2</p>
+                            <p><?= $_SESSION['csp_2Score']; ?>/20</p>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="second__bloc__score">
                     <div class="frame__score">
@@ -119,11 +197,11 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
             <div class="three__bloc__center">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <?php foreach($result as $metier): ?>
-                                <div class="swiper-slide">
-                                    <p><?= $metier->categorie ?></p>
-                                    <p>grade<?= $metier->grade ?></p>
-                                </div>   
+                        <?php foreach ($result as $metier) : ?>
+                            <div class="swiper-slide">
+                                <p><?= $metier->categorie ?></p>
+                                <p>grade<?= $metier->grade ?></p>
+                            </div>
                         <?php endforeach; ?>
                     </div>
                     <div class="swiper-pagination"></div>
