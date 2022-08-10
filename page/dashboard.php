@@ -27,7 +27,13 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
                 <div class="second__frame__name">
                     <p><?= $_SESSION['prenom']; ?></p> <!-- On utilise notre tableau crée dans le traitement de connection pour afficher les données -->
                     <p><?= $_SESSION['nom']; ?></p>
-                    <p><?= $_SESSION['age']; ?></p>
+                    <p><?= $_SESSION['age']; ?> ans</p>
+                    <form action="../systeme/delete.php" method="POST">
+                        <button class="delete__button" type="submit">Supprimer mon compte</button>
+                    </form>
+                    <form action="../systeme/update.php" method="POST">
+                        <button class="delete__button" type="submit">Modifier mon profil</button>
+                    </form>
                 </div>
             </div>
             <div class="img__left__dash">
@@ -61,13 +67,11 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
                     <div class="content__2">
                         <p>Taille</p>
                         <p><?= $_SESSION['taille']; ?>cm</p>
-                        <button class="">Modifier</button>
                     </div>
                     <?php if($_SESSION['revenu_1'] != 0): ?>
                         <div class="content__3">
                             <p>Revenu 1</p>
                             <p><?= $_SESSION['revenu_1']; ?>€</p>
-                            <button class="">Modifier</button>
                         </div>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['csp_1'])): ?>
@@ -100,7 +104,6 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
                                             echo 'Error';
                                     }
                             ?></p>
-                            <button class="">Modifier</button>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -112,13 +115,11 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
                     <div class="content__2">
                         <p>Poid</p>
                         <p><?= $_SESSION['poid']; ?>Kg</p>
-                        <button class="">Modifier</button>
                     </div>
                     <?php if($_SESSION['revenu_2'] != 0): ?>
                         <div class="content__3">
                             <p>Revenu 2</p>
                             <p><?= $_SESSION['revenu_2']; ?>€</p>
-                            <button class="">Modifier</button>
                         </div>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['csp_2'])): ?>
@@ -151,7 +152,6 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
                                             echo 'Error';
                                     }
                             ?></p>
-                            <button class="">Modifier</button>
                         </div>
                     <?php endif; ?>
                 </div>

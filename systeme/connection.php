@@ -40,6 +40,7 @@ if (isset($_POST['submit'])) { /* 1 : ici on vérifie qu'on a bien envoyer un fo
             // if($_POST['password'] == $result->mdp) { /* je vérifie que le mot de passe envoyé dans le formulaire est égale au mot de la bdd*/ /*-> pour cibler un élement d'unt tableau de type objet */ /* la dans mon tableau ou il ya les infos de la bdd, je cible le mdp de la bdd*/
             $_SESSION = [ /* $_SESSION est acessible sur tous les fichier car c une superglobale , il contient les données de l'utilisateur*/ /* one fait ce tableau ici car c a ce moment qu'on donne l'acces au infos de l'utilisateur */
                 'connecter' => true, /* j'utlise la superglobale $_SESSION dans laquelle j'ajoute dans le tableau l'élément connecter avec une valeur à true */
+                'id' => $result->id,
                 'nom' =>  $result->nom,
                 'prenom' =>  $result->prenom,
                 'age' => $result->age,
@@ -59,6 +60,7 @@ if (isset($_POST['submit'])) { /* 1 : ici on vérifie qu'on a bien envoyer un fo
                 'gpScore' => $result->gpScore,
                 'csp_1Score' => $result->csp_1Score,
                 'csp_2Score' => $result->csp_2Score,
+                'users_id' => $result->users_id,
             ];
             header('location: ../page/dashboard.php');
         } else {
