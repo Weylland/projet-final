@@ -31,7 +31,7 @@ $result = $statement->fetchAll(); /* y récupère toutes les données quon lui a
                     <form action="../systeme/delete.php" method="POST">
                         <button class="delete__button" type="submit">Supprimer mon compte</button>
                     </form>
-                    <form action="../systeme/update.php" method="POST">
+                    <form action="./update.php" method="POST">
                         <button class="delete__button" type="submit">Modifier mon profil</button>
                     </form>
                 </div>
