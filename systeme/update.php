@@ -141,7 +141,27 @@ if (isset($_POST['submit'])) {
 
     // Ici c'est la modification des données dans la base de données 
     $requete = "UPDATE users, score 
-    SET age = :age, nom = :nom, prenom = :prenom, mail = :mail, mdp = :mdp, poid = :poid, taille = :taille, genre = :genre, sang = :sang, csp_1 = :csp_1, csp_2 = :csp_2, revenu_1 = :revenu_1, revenu_2 = :revenu_2, score = :score, ageScore = :ageScore, imcScore = :imcScore, genreScore = :genreScore, gpScore = :gpScore, csp_1Score = :csp_1Score, csp_2Score = :csp_2Score WHERE users.id = :id";
+    SET age = :age, 
+    nom = :nom, 
+    prenom = :prenom, 
+    mail = :mail, 
+    mdp = :mdp, 
+    poid = :poid, 
+    taille = :taille, 
+    genre = :genre, 
+    sang = :sang, 
+    csp_1 = :csp_1, 
+    csp_2 = :csp_2, 
+    revenu_1 = :revenu_1, 
+    revenu_2 = :revenu_2, 
+    score = :score, 
+    ageScore = :ageScore, 
+    imcScore = :imcScore, 
+    genreScore = :genreScore, 
+    gpScore = :gpScore, 
+    csp_1Score = :csp_1Score, 
+    csp_2Score = :csp_2Score 
+    WHERE users.id = :id";
     $statement = $pdo->prepare($requete);
 
 

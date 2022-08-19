@@ -12,4 +12,7 @@ $statement->execute([
     'email' => $_SESSION['mail']
 ]);
 
+$_SESSION = array();
+session_destroy();
+
 header('location: ../page/front-page.php');

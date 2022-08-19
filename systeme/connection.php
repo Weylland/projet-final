@@ -19,10 +19,10 @@ $pdo = connection_bdd();
 $requete = 'SELECT * 
             FROM score, users 
             WHERE users.id = score.id_users
-            AND mail = :email'; /* SQL : Je selectionne TOUT de la table users quand la colonne de la bb mail est égale à :mail */
+            AND mail = :email'; 
 $statement = $pdo->prepare($requete);
-$statement->execute([ /* je crée un tableau dans la méthode execute, l'argument est un tableau */
-    'email' => $_POST['emails'] /* la clef c'est email (lié à :email), j'attribus la valeur à l'aide de => $_POST emails qui est lié au name de notre forulaire */
+$statement->execute([ 
+    'email' => $_POST['emails'] 
 ]);
 
 

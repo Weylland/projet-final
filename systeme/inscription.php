@@ -118,10 +118,11 @@ $statement->execute([
 $count = $statement->rowCount();
 
 if (isset($_POST['submit'])) {
-
-    if ( /* Dans une premier temps on vérifie si c'est vide */
-        empty($_POST['mail']) || filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) === false /* vérification du mail */
+    
+    if ( 
+        empty($_POST['mail']) || filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) === false 
         || empty($_POST['confMail']) || filter_var($_POST['confMail'], FILTER_VALIDATE_EMAIL) === false
+        || $_POST['mail'] != $_POST['confMail'] || $_POST['password'] !== $_POST['confPass']
         || empty($_POST['nom'])
         || empty($_POST['prenom'])
         || empty($_POST['age'])
@@ -131,13 +132,11 @@ if (isset($_POST['submit'])) {
         || empty($_POST['poids'])
         || empty($_POST['genre'])
         || empty($_POST['groupeSanguins'])
-        || $_POST['mail'] !== $_POST['confMail'] /* Ici on vérifie si mail est différent de confMail avec !== */
-        || $_POST['password'] !== $_POST['confPass'] /* la meme avec le mdp */
         || $count > 0
     ) {
-        header('location: ../page/inscription.php'); /* Si c'est vide on est redirigé vers la page du formulaire */
+        header('location: ../page/inscription.php');
+        exit;
     }
-
 
     // Ici c'est l'envoi des données du formulaire dans la base de données 
     $requete = "INSERT INTO `welcome`.`users` VALUES (null, :age, :nom, :prenom, :mail, :mdp, :poid, :taille, :genre, :sang, :csp_1, :csp_2, :revenu_1, :revenu_2, :score )";
@@ -177,10 +176,6 @@ if (isset($_POST['submit'])) {
         "csp_2Score"=> $cspScore2,
         "id_users"=> $result->id
     ]);
-
-
-
-
 
     header('location: ../page/connection.php');
 }
